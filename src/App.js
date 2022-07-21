@@ -48,7 +48,7 @@ if(true){
 
       </Routes>
       <Sticky />
-      {location.pathname === "/thong-tin-cua-toi" || "/new-post" ? "": <Footer/>}
+      {location.pathname === ("/thong-tin-cua-toi" || "/new-post") ? "": <Footer/>}
     </div>
   );
 }
