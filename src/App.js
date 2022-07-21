@@ -30,7 +30,7 @@ if(!isMobile){
   return (
     <div className="App">
     {connect ? "" :<Internet/>}
-    {location.pathname === "/thong-tin-cua-toi" || "/new-post" ? "": <Banner/>}
+    {location.pathname === ("/thong-tin-cua-toi" || "/new-post") ? "": <Banner/>}
 
       <Header/>
       <Routes>

@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "../css/Findpeople.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, Button, Card } from "react-bootstrap";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 
 // import { IconName } from "react-icons/ai";
@@ -87,22 +87,17 @@ const Findpeople = () => {
       like: 0,
     },
   ]
-  const [like, setLike] = useState(null)
-  const [indexx, setIndexx] = useState(null)
-  const [dataer, setDataer] = useState(datas)
-  const navigate = useNavigate()
+
   const route = () => {
     const token = localStorage.getItem("x-access-token");
     return token ? true : false;
   };
 
   const Click = (index) => {
-    setLike(dataer[index].like+=1)
     if(!route()) {
       alert("Vui lòng đăng nhập nhé bạn iu!")
     }
   }
-  const users = useSelector(state => state.isLoggedIn)
 
 
 return (
@@ -128,7 +123,7 @@ return (
         <div className="right">
           <div className="text-header">Việc làm mới nhất ({datas.length})</div>
           <div className="findpeople-body">
-            {dataer.map((data, index, past) => (
+            {datas.map((data, index, past) => (
               <div className="findpeople-body-component" key={index}>
                 <img src={url} alt="Thao" />
                 <Card style={{ border: "none" }}>

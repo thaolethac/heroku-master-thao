@@ -3,14 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logoutAction } from "../../container/actions";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Form, Modal, Accordion } from "react-bootstrap";
 import "./Header.css";
 import { useNavigate } from "react-router";
 import Login from "../body/Login";
 import Register from "../body/Register";
 import Avatar from "./Avatar";
 import Offcanvas from "./Offcanvas";
-import Banner from "./Banner";
 // import Homeavatar from "../profile/Homeavatar";
 
 const style = {

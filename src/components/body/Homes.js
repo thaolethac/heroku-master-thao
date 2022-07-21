@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../css/Homes.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useDispatch, useStore,useSelector } from "react-redux";
+import {useSelector } from "react-redux";
 
 import {
   Form,
   Button,
   Carousel,
   Card,
-  CardGroup,
   ListGroup,
   ListGroupItem,
 } from "react-bootstrap";

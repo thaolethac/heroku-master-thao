@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Form, Modal } from "react-bootstrap";
-import { useDispatch, useStore,useSelector } from "react-redux";
-import { loginAction, getuserAction } from "../../container/actions";
+import { useDispatch} from "react-redux";
+import { loginAction } from "../../container/actions";
 import { useNavigate } from "react-router";
-import axios from "axios";
 
 const Login = () => {
   const [username, setUsername] = useState(" ");
@@ -13,13 +12,9 @@ const Login = () => {
   const [show, setShow] = useState(true);
   const dispatch = useDispatch();
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   const navigate = useNavigate();
   const User = {
     username
-  };
-  const usered = {
-    username,
   };
 
   const handleSubmit = (e) => {
