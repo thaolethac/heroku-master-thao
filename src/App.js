@@ -25,7 +25,7 @@ function App() {
   window.addEventListener("offline", () =>
   setConnect(false)
 );
-if(!isMobile){
+if(true){
 
   return (
     <div className="App">
