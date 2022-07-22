@@ -51,7 +51,7 @@ const Home = () => {
   // }
   async function getUser() {
     try {
-      const response = await axios.get('http://localhost:3000/getlistpost');
+      const response = await axios.get('https://node-app-app.herokuapp.com/getlistpost');
       setDatas(response.data)
     } catch (error) {
       console.error(error);
@@ -66,7 +66,7 @@ const Home = () => {
   };
   const Deleted = (id) => {
     // alert("Bạn muốn xóa post này");
-    axios.delete(`http://localhost:3000/deletepost/${id}`);
+    axios.delete(`https://node-app-app.herokuapp.com/deletepost/${id}`);
   };
   const Fixed = (id) => {
    console.log(id)
@@ -78,7 +78,7 @@ const Home = () => {
       newDes : newDes,
     }
     dispatch(updatepostAction(updatePost))
-    // axios.put("http://localhost:3000/updatepost", {
+    // axios.put("https://node-app-app.herokuapp.com/updatepost", {
     //    id : id,
     //   newPost : newPost,
     //   newDes : newDes,
